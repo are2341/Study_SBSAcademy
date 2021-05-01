@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4b5acbf6-1bcb-48b3-a0e6-0c37cf0070a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Global">
+      <UniqueIdentifier>{b88abf13-0180-49bb-8dd1-5c2b7808bda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Global\Define">
+      <UniqueIdentifier>{bce630eb-cc71-4b8c-9fb7-16d71996ccee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Example_01 %28WinAPI 기초%29">
+      <UniqueIdentifier>{f476e6c0-f954-47e7-ab66-e5c353875886}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\Global\Define\KGDefine.h">
+      <Filter>Classes\Global\Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Example_01\Example_01.h">
+      <Filter>Classes\Example_01 %28WinAPI 기초%29</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\Example.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Example_01\Example_01.cpp">
+      <Filter>Classes\Example_01 %28WinAPI 기초%29</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
