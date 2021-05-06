@@ -31,6 +31,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <EnableUnitySupport>true</EnableUnitySupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -140,11 +141,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Classes\Example_01\Example_01.h" />
+    <ClInclude Include="Classes\Example_02\Example_02.h" />
+    <ClInclude Include="Classes\Example_03\Example_03.h" />
+    <ClInclude Include="Classes\Example_04\Example_04.h" />
+    <ClInclude Include="Classes\Example_05\Example_05.h" />
     <ClInclude Include="Classes\Global\Define\KGDefine.h" />
+    <ClInclude Include="Classes\Global\Utility\Base\CWndApp.h" />
+    <ClInclude Include="Classes\Global\Utility\Interface\INoncopyable.h" />
+    <ClInclude Include="Classes\Global\Utility\Interface\IRenderable.h" />
+    <ClInclude Include="Classes\Global\Utility\Interface\IUpdateable.h" />
+    <ClInclude Include="Classes\Global\Utility\Manager\CInputManager.h" />
+    <ClInclude Include="Classes\Global\Utility\Manager\CTimeManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\Example.cpp" />
     <ClCompile Include="Classes\Example_01\Example_01.cpp" />
+    <ClCompile Include="Classes\Example_02\Example_02.cpp" />
+    <ClCompile Include="Classes\Example_03\Example_03.cpp" />
+    <ClCompile Include="Classes\Example_04\Example_04.cpp" />
+    <ClCompile Include="Classes\Example_05\Example_05.cpp" />
+    <ClCompile Include="Classes\Global\Utility\Base\CWndApp.cpp" />
+    <ClCompile Include="Classes\Global\Utility\Manager\CInputManager.cpp" />
+    <ClCompile Include="Classes\Global\Utility\Manager\CTimeManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

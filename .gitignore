@@ -5,5 +5,5 @@ Language/C#/Example/Example/obj
 
 Framework/WinAPI/Example/.vs
 Framework/WinAPI/Example/.vscode
-Framework/WinAPI/Example/Example/bin
-Framework/WinAPI/Example/Example/obj
+Framework/WinAPI/Example/Debug
+Framework/WinAPI/Example/Example/Debug

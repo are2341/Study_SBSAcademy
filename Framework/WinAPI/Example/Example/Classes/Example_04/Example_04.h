@@ -3,10 +3,10 @@
 #include "../Global/Define/KGDefine.h"
 #include "../Global/Utility/Base/CWndApp.h"
 
-//! Example 1
-class Example_01 : public CWndApp {
+//! Example 4
+class Example_04 : public CWndApp {
 public:			// 持失切
 
 	//! 持失切
-	Example_01(HINSTANCE a_hInst, int a_nShowOpts, const SIZE &a_rstWndSize);
+	Example_04(HINSTANCE a_hInst, int a_nShowOpts, const SIZE &a_rstWndSize);
 };
