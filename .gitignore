@@ -2,3 +2,8 @@ Language/C#/Example/.vs
 Language/C#/Example/.vscode
 Language/C#/Example/Example/bin
 Language/C#/Example/Example/obj
+
+Framework/WinAPI/Example/.vs
+Framework/WinAPI/Example/.vscode
+Framework/WinAPI/Example/Debug
+Framework/WinAPI/Example/Example/Debug
