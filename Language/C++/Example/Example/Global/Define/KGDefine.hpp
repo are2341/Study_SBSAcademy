@@ -10,5 +10,6 @@
 
 #include <iostream>
 #include <cassert>
+#include <memory>
 
 #endif /* KGDefine_hpp */
