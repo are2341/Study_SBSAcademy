@@ -18,5 +18,10 @@ public:			// 持失切, 社瑚切
 	INoncopyable(void) { }
 
 	//! 社瑚切
-	virtual ~INoncopyable(void) { }
+	virtual ~INoncopyable(void) = 0;
 };
+
+//! 社瑚切
+INoncopyable::~INoncopyable(void) {
+	// Do Nothing
+}

@@ -29,17 +29,20 @@
     <Filter Include="Classes\Global\Utility\Manager">
       <UniqueIdentifier>{bf673ec6-99f9-4730-b500-5f3a047c6830}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Example_02 %28GDI 객체 - 1%29">
-      <UniqueIdentifier>{5e044d5c-ef80-4ecf-b4e6-08d07f88216d}</UniqueIdentifier>
+    <Filter Include="Classes\Global\Function">
+      <UniqueIdentifier>{323fc4a1-ed3c-4f07-8df8-803db647826d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Example_03 %28GDI 객체 - 2%29">
-      <UniqueIdentifier>{a2b64ed5-1153-4352-b6bd-917f27f3f842}</UniqueIdentifier>
+    <Filter Include="Classes\Example_05 %28GDI 객체 - 3%29">
+      <UniqueIdentifier>{66ce1f2e-0c00-4949-abc0-5ee1d5a9f34c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Example_04 %28GDI 객체 - 3%29">
+    <Filter Include="Classes\Example_04 %28GDI 객체 - 2%29">
       <UniqueIdentifier>{edb0891e-e8b9-4a1b-97ff-6ccc879a2df5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Example_05 %28더블 버퍼링%29">
-      <UniqueIdentifier>{66ce1f2e-0c00-4949-abc0-5ee1d5a9f34c}</UniqueIdentifier>
+    <Filter Include="Classes\Example_03 %28GDI 객체 - 1%29">
+      <UniqueIdentifier>{a2b64ed5-1153-4352-b6bd-917f27f3f842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Example_02 %28디바이스 컨텍스트%29">
+      <UniqueIdentifier>{5e044d5c-ef80-4ecf-b4e6-08d07f88216d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,7 +65,7 @@
       <Filter>Classes\Global\Utility\Interface</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Example_02\Example_02.h">
-      <Filter>Classes\Example_02 %28GDI 객체 - 1%29</Filter>
+      <Filter>Classes\Example_02 %28디바이스 컨텍스트%29</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Global\Utility\Manager\CTimeManager.h">
       <Filter>Classes\Global\Utility\Manager</Filter>
@@ -71,13 +74,16 @@
       <Filter>Classes\Global\Utility\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Example_03\Example_03.h">
-      <Filter>Classes\Example_03 %28GDI 객체 - 2%29</Filter>
+      <Filter>Classes\Example_03 %28GDI 객체 - 1%29</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Example_04\Example_04.h">
-      <Filter>Classes\Example_04 %28GDI 객체 - 3%29</Filter>
+      <Filter>Classes\Example_04 %28GDI 객체 - 2%29</Filter>
     </ClInclude>
     <ClInclude Include="Classes\Example_05\Example_05.h">
-      <Filter>Classes\Example_05 %28더블 버퍼링%29</Filter>
+      <Filter>Classes\Example_05 %28GDI 객체 - 3%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\Global\Function\GFunc.h">
+      <Filter>Classes\Global\Function</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -91,7 +97,7 @@
       <Filter>Classes\Global\Utility\Base</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Example_02\Example_02.cpp">
-      <Filter>Classes\Example_02 %28GDI 객체 - 1%29</Filter>
+      <Filter>Classes\Example_02 %28디바이스 컨텍스트%29</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Global\Utility\Manager\CTimeManager.cpp">
       <Filter>Classes\Global\Utility\Manager</Filter>
@@ -100,13 +106,16 @@
       <Filter>Classes\Global\Utility\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Example_03\Example_03.cpp">
-      <Filter>Classes\Example_03 %28GDI 객체 - 2%29</Filter>
+      <Filter>Classes\Example_03 %28GDI 객체 - 1%29</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Example_04\Example_04.cpp">
-      <Filter>Classes\Example_04 %28GDI 객체 - 3%29</Filter>
+      <Filter>Classes\Example_04 %28GDI 객체 - 2%29</Filter>
     </ClCompile>
     <ClCompile Include="Classes\Example_05\Example_05.cpp">
-      <Filter>Classes\Example_05 %28더블 버퍼링%29</Filter>
+      <Filter>Classes\Example_05 %28GDI 객체 - 3%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\Global\Function\GFunc.cpp">
+      <Filter>Classes\Global\Function</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ void CInputManager::Init(void) {
 	m_pMouseDevice = this->CreateMouseDevice();
 }
 
-void CInputManager::Update(void) {
+void CInputManager::Update(float a_fDeltaTime) {
 	CopyMemory(m_anPrevKeyStates, m_anKeyStates, sizeof(m_anKeyStates));
 	CopyMemory(&m_stPrevMouseState, &m_stMouseState, sizeof(m_stMouseState));
 

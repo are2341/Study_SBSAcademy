@@ -8,21 +8,21 @@ class CTimeManager : public IUpdateable {
 public:			// IUpdateable
 
 	//! 상태를 갱신한다
-	virtual void Update(void) override;
+	virtual void Update(float a_fDeltaTime) override;
 
 public:			// public 함수
 
 	//! 싱글턴
 	DECLARE_SINGLETON(CTimeManager);
 
-	//! 초기화
-	virtual void Init(void);
-
 	//! 시간 간격을 반환한다
-	float GetDeltaTime(void) const;
+	DECLARE_GETTER(float, DeltaTime, m_fDeltaTime);
 
 	//! 실행 시간을 반환한다
-	float GetRunningTime(void) const;
+	DECLARE_GETTER(float, RunningTime, m_fRunningTime);
+
+	//! 초기화
+	virtual void Init(void);
 
 private:			// private 변수
 

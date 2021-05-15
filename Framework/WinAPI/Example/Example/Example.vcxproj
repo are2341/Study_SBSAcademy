@@ -73,6 +73,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -146,6 +148,7 @@
     <ClInclude Include="Classes\Example_04\Example_04.h" />
     <ClInclude Include="Classes\Example_05\Example_05.h" />
     <ClInclude Include="Classes\Global\Define\KGDefine.h" />
+    <ClInclude Include="Classes\Global\Function\GFunc.h" />
     <ClInclude Include="Classes\Global\Utility\Base\CWndApp.h" />
     <ClInclude Include="Classes\Global\Utility\Interface\INoncopyable.h" />
     <ClInclude Include="Classes\Global\Utility\Interface\IRenderable.h" />
@@ -160,6 +163,7 @@
     <ClCompile Include="Classes\Example_03\Example_03.cpp" />
     <ClCompile Include="Classes\Example_04\Example_04.cpp" />
     <ClCompile Include="Classes\Example_05\Example_05.cpp" />
+    <ClCompile Include="Classes\Global\Function\GFunc.cpp" />
     <ClCompile Include="Classes\Global\Utility\Base\CWndApp.cpp" />
     <ClCompile Include="Classes\Global\Utility\Manager\CInputManager.cpp" />
     <ClCompile Include="Classes\Global\Utility\Manager\CTimeManager.cpp" />

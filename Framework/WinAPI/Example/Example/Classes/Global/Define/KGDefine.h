@@ -5,6 +5,10 @@
 #include <cassert>
 #include <memory>
 #include <chrono>
+#include <vector>
+#include <unordered_map>
+#include <d3d9.h>
+#include <d3dx9.h>
 #include <dinput.h>
 #include <Windows.h>
 #include <tchar.h>
@@ -49,6 +53,9 @@
 // 윈도우 어플리케이션 {
 #define GET_WND_APP()			(CWndApp::GetInst())
 
+#define GET_DC()				(GET_WND_APP()->GetDC())
+#define GET_MEM_DC()			(GET_WND_APP()->GetMemDC())
+
 #define GET_WND_SIZE()				(GET_WND_APP()->GetWndSize())
 #define GET_WND_HANDLE()			(GET_WND_APP()->GetWndHandle())
 #define GET_INST_HANDLE()			(GET_WND_APP()->GetInstHandle())
@@ -64,6 +71,30 @@ static CLS_NAME * GetInst(void) {			\
 	static CLS_NAME oInst;					\
 	return &oInst;							\
 }
+
+// 접근자 {
+#define DECLARE_GETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)			\
+public:															\
+DATA_TYPE Get##FUNC_NAME(void) const {							\
+	return VAR_NAME;											\
+}
+
+#define DECLARE_STATIC_GETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)			\
+public:																	\
+static DATA_TYPE Get##FUNC_NAME(void) {									\
+	return VAR_NAME;													\
+}
+
+#define DECLARE_SETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)			\
+public:															\
+void Set##FUNC_NAME(DATA_TYPE a_tVal) {							\
+	VAR_NAME = a_tVal;											\
+}
+
+#define DECLARE_GETTER_SETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)			\
+DECLARE_GETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)							\
+DECLARE_SETTER(DATA_TYPE, FUNC_NAME, VAR_NAME)
+// 접근자 }
 
 //! 마우스 버튼
 enum class EMouseBtn {
