@@ -1,4 +1,5 @@
 #include "CWndApp.h"
+#include "../../Function/GFunc.h"
 #include "../Manager/CTimeManager.h"
 #include "../Manager/CInputManager.h"
 
@@ -109,6 +110,15 @@ void CWndApp::Render(HDC a_hDC) {
 	this->PreRender(a_hDC);
 	this->DoRender(a_hDC);
 	this->PostRender(a_hDC);
+
+	TCHAR szStr[MAX_PATH] = _T("");
+	_stprintf(szStr, _T("Delta Time: %f sec\nRunning Time: %f sec"), GET_DELTA_TIME(), GET_RUNNING_TIME());
+
+	POINT stPos = {
+		10, 10
+	};
+
+	GFunc::DrawStr(a_hDC, szStr, stPos, DT_TOP | DT_LEFT);
 }
 
 int CWndApp::Run(void) {

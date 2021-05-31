@@ -68,6 +68,7 @@ protected:			// 생성자, 소멸자
 protected:			// protected 변수
 
 	int m_nShowOpts = 0;
+	float m_fSkipTime = 0.0f;
 
 	SIZE m_stWndSize;
 	WNDCLASS m_stWndCls;

@@ -13,7 +13,6 @@ public:
 		RED,
 		GREEN,
 		BLUE,
-		BLACK,
 		MAX_VAL
 	};
 
@@ -48,7 +47,7 @@ protected:			// protected 함수
 
 private:			// private 변수
 
-	EColor m_eColor = EColor::BLACK;
+	EColor m_eColor = EColor::RED;
 
 	std::vector<STLineInfo> m_oLineInfoList;
 	std::unordered_map<EColor, HPEN> m_oPenList;
