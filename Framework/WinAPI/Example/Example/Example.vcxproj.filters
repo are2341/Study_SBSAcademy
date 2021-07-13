@@ -61,9 +61,6 @@
     <ClInclude Include="Classes\Global\Utility\Interface\IRenderable.h">
       <Filter>Classes\Global\Utility\Interface</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\Global\Utility\Interface\INoncopyable.h">
-      <Filter>Classes\Global\Utility\Interface</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\Example_02\Example_02.h">
       <Filter>Classes\Example_02 %28디바이스 컨텍스트%29</Filter>
     </ClInclude>

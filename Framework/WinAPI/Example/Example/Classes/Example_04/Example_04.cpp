@@ -38,8 +38,8 @@ void Example_04::Init(void) {
 	m_oBrushList.insert(decltype(m_oBrushList)::value_type(EColor::BLUE, hBlueBrush));
 }
 
-void Example_04::Update(float a_fDeltaTime) {
-	CWndApp::Update(a_fDeltaTime);
+void Example_04::Update(void) {
+	CWndApp::Update();
 
 	// »¡°£»ö Ææ Å°¸¦ ´­·¶À» °æ¿ì
 	if(IS_KEY_PRESS(DIK_R)) {
@@ -88,26 +88,26 @@ void Example_04::Update(float a_fDeltaTime) {
 	}
 }
 
-void Example_04::DoRender(HDC a_hDC) {
-	CWndApp::DoRender(a_hDC);
+void Example_04::DoRender(void) {
+	CWndApp::DoRender();
 
 	for(auto &rstShapeInfo : m_oShapeInfoList) {
 		HPEN hPen = m_oPenList[rstShapeInfo.m_eColor];
-		HPEN hPrevPen = (HPEN)SelectObject(a_hDC, hPen);
+		HPEN hPrevPen = (HPEN)SelectObject(GET_MEM_DC(), hPen);
 
 		HBRUSH hBrush = m_oBrushList[rstShapeInfo.m_eColor];
-		HBRUSH hPrevBrush = (HBRUSH)SelectObject(a_hDC, hBrush);
+		HBRUSH hPrevBrush = (HBRUSH)SelectObject(GET_MEM_DC(), hBrush);
 
 		__try {
 			switch(rstShapeInfo.m_eShape) {
-				case EShape::LINE: GFunc::DrawLine(a_hDC, rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
-				case EShape::RECTANGLE: GFunc::DrawRectangle(a_hDC, rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
-				case EShape::ELLIPSE: GFunc::DrawEllipse(a_hDC, rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
+				case EShape::LINE: GFunc::DrawLine(GET_MEM_DC(), rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
+				case EShape::RECTANGLE: GFunc::DrawRectangle(GET_MEM_DC(), rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
+				case EShape::ELLIPSE: GFunc::DrawEllipse(GET_MEM_DC(), rstShapeInfo.m_stStartPos, rstShapeInfo.m_stEndPos); break;
 			}
 			
 		} __finally {
-			SelectObject(a_hDC, hPrevPen);
-			SelectObject(a_hDC, hPrevBrush);
+			SelectObject(GET_MEM_DC(), hPrevPen);
+			SelectObject(GET_MEM_DC(), hPrevBrush);
 		}
 	}
 }

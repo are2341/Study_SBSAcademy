@@ -52,8 +52,6 @@
 
 // 윈도우 어플리케이션 {
 #define GET_WND_APP()			(CWndApp::GetInst())
-
-#define GET_DC()				(GET_WND_APP()->GetDC())
 #define GET_MEM_DC()			(GET_WND_APP()->GetMemDC())
 
 #define GET_WND_SIZE()				(GET_WND_APP()->GetWndSize())

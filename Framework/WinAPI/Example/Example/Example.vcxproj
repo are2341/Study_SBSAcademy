@@ -150,7 +150,6 @@
     <ClInclude Include="Classes\Global\Define\KGDefine.h" />
     <ClInclude Include="Classes\Global\Function\GFunc.h" />
     <ClInclude Include="Classes\Global\Utility\Base\CWndApp.h" />
-    <ClInclude Include="Classes\Global\Utility\Interface\INoncopyable.h" />
     <ClInclude Include="Classes\Global\Utility\Interface\IRenderable.h" />
     <ClInclude Include="Classes\Global\Utility\Interface\IUpdateable.h" />
     <ClInclude Include="Classes\Global\Utility\Manager\CInputManager.h" />

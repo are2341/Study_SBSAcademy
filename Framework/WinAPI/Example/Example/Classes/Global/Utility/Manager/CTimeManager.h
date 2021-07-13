@@ -8,7 +8,7 @@ class CTimeManager : public IUpdateable {
 public:			// IUpdateable
 
 	//! 상태를 갱신한다
-	virtual void Update(float a_fDeltaTime) override;
+	virtual void Update(void) override;
 
 public:			// public 함수
 

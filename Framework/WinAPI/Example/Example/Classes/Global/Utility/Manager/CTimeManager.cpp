@@ -13,7 +13,7 @@ void CTimeManager::Init(void) {
 	m_oStartTime = std::chrono::system_clock::now();
 }
 
-void CTimeManager::Update(float a_fDeltaTime) {
+void CTimeManager::Update(void) {
 	auto oCurTime = std::chrono::system_clock::now();
 
 	m_fDeltaTime = std::chrono::duration<float>(oCurTime - m_oPrevTime).count();

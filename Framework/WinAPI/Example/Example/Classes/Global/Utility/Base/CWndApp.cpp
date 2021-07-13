@@ -101,15 +101,15 @@ void CWndApp::Init(void) {
 	GET_INPUT_MANAGER()->Init();
 }
 
-void CWndApp::Update(float a_fDeltaTime) {
-	GET_TIME_MANAGER()->Update(a_fDeltaTime);
-	GET_INPUT_MANAGER()->Update(a_fDeltaTime);
+void CWndApp::Update(void) {
+	GET_TIME_MANAGER()->Update();
+	GET_INPUT_MANAGER()->Update();
 }
 
-void CWndApp::Render(HDC a_hDC) {
-	this->PreRender(a_hDC);
-	this->DoRender(a_hDC);
-	this->PostRender(a_hDC);
+void CWndApp::Render(void) {
+	this->PreRender();
+	this->DoRender();
+	this->PostRender();
 
 	TCHAR szStr[MAX_PATH] = _T("");
 	_stprintf(szStr, _T("Delta Time: %f sec\nRunning Time: %f sec"), GET_DELTA_TIME(), GET_RUNNING_TIME());
@@ -118,7 +118,7 @@ void CWndApp::Render(HDC a_hDC) {
 		10, 10
 	};
 
-	GFunc::DrawStr(a_hDC, szStr, stPos, DT_TOP | DT_LEFT);
+	GFunc::DrawStr(m_hMemDC, szStr, stPos, DT_TOP | DT_LEFT);
 }
 
 int CWndApp::Run(void) {
@@ -198,13 +198,16 @@ int CWndApp::RunMsgLoop(void) {
 			0, 0, m_stWndSize.cx, m_stWndSize.cy
 		};
 
+		m_hDC = hDC;
+		m_hMemDC = hMemDC;
+
 		FillRect(hMemDC, &stWndRect, m_stWndCls.hbrBackground);
 
 		__try {
-			this->Update(GET_DELTA_TIME());
-			this->LateUpdate(GET_DELTA_TIME());
+			this->Update();
+			this->LateUpdate();
 
-			this->Render(hMemDC);
+			this->Render();
 			StretchBlt(hDC, 0, 0, m_stWndSize.cx, m_stWndSize.cy, hMemDC, 0, 0, m_stWndSize.cx, m_stWndSize.cy, SRCCOPY);
 		} __finally {
 			SelectObject(hMemDC, hPrevMemBitmap);

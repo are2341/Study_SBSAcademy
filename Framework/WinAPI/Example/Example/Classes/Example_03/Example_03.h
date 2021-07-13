@@ -27,10 +27,10 @@ public:
 public:			// public 함수
 
 	//! 상태를 갱신한다
-	virtual void Update(float a_fDeltaTime) override;
+	virtual void Update(void) override;
 
 	//! 물체를 그린다
-	virtual void DoRender(HDC a_hDC) override;
+	virtual void DoRender(void) override;
 
 public:			// 생성자, 소멸자
 

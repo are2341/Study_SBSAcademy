@@ -27,8 +27,8 @@ int WINAPI _tWinMain(HINSTANCE a_hInst, HINSTANCE a_hPrevInst, TCHAR *a_pszCmdLi
 	//Example_01 oApp(a_hInst, a_nShowOpts, stWndSize);
 	//Example_02 oApp(a_hInst, a_nShowOpts, stWndSize);
 	//Example_03 oApp(a_hInst, a_nShowOpts, stWndSize);
-	Example_04 oApp(a_hInst, a_nShowOpts, stWndSize);
-	//Example_05 oApp(a_hInst, a_nShowOpts, stWndSize);
+	//Example_04 oApp(a_hInst, a_nShowOpts, stWndSize);
+	Example_05 oApp(a_hInst, a_nShowOpts, stWndSize);
 
 	return oApp.Run();
 }

@@ -3,24 +3,26 @@
 #include "../../Define/KGDefine.h"
 #include "../Interface/IUpdateable.h"
 #include "../Interface/IRenderable.h"
-#include "../Interface/INoncopyable.h"
 
 //! 윈도우 어플리케이션
-class CWndApp : public IUpdateable, public IRenderable, public INoncopyable {
+class CWndApp : public IUpdateable, public IRenderable {
 public:			// IUpdateable
 
 	//! 상태를 갱신한다
-	virtual void Update(float a_fDeltaTime) override;
+	virtual void Update(void) override;
 
 public:			// IRenderable
 
 	//! 물체를 그린다
-	virtual void Render(HDC a_hDC) final override;
+	virtual void Render(void) final override;
 
 public:			// public 함수
 
 	//! 윈도우 크기를 반환한다
 	DECLARE_GETTER(SIZE, WndSize, m_stWndSize);
+
+	//! 메모리 DC 를 반환한다
+	DECLARE_GETTER(HDC, MemDC, m_hMemDC);
 
 	//! 윈도우 핸들을 반환한다
 	DECLARE_GETTER(HWND, WndHandle, m_hWnd);
@@ -74,6 +76,8 @@ protected:			// protected 변수
 	WNDCLASS m_stWndCls;
 
 	HDC m_hDC = nullptr;
+	HDC m_hMemDC = nullptr;
+
 	HWND m_hWnd = nullptr;
 	HBITMAP m_hBitmap = nullptr;
 	HINSTANCE m_hInst = nullptr;

@@ -30,8 +30,8 @@ void Example_03::Init(void) {
 	m_oPenList.insert(decltype(m_oPenList)::value_type(EColor::BLUE, hBluePen));
 }
 
-void Example_03::Update(float a_fDeltaTime) {
-	CWndApp::Update(a_fDeltaTime);
+void Example_03::Update(void) {
+	CWndApp::Update();
 
 	// 빨간색 펜 키를 눌렀을 경우
 	if(IS_KEY_PRESS(DIK_R)) {
@@ -65,8 +65,8 @@ void Example_03::Update(float a_fDeltaTime) {
 	}
 }
 
-void Example_03::DoRender(HDC a_hDC) {
-	CWndApp::DoRender(a_hDC);
+void Example_03::DoRender(void) {
+	CWndApp::DoRender();
 
 	/*
 	SelectObject 함수는 디바이스 컨텍스트에 GDI 객체를 설정하는 역할을 수행한다. (즉, 해당
@@ -79,12 +79,12 @@ void Example_03::DoRender(HDC a_hDC) {
 	*/
 	for(auto &rstLineInfo : m_oLineInfoList) {
 		HPEN hPen = m_oPenList[rstLineInfo.m_eColor];
-		HPEN hPrevPen = (HPEN)SelectObject(a_hDC, hPen);
+		HPEN hPrevPen = (HPEN)SelectObject(GET_MEM_DC(), hPen);
 
 		__try {
-			GFunc::DrawLine(a_hDC, rstLineInfo.m_stStartPos, rstLineInfo.m_stEndPos);
+			GFunc::DrawLine(GET_MEM_DC(), rstLineInfo.m_stStartPos, rstLineInfo.m_stEndPos);
 		} __finally {
-			SelectObject(a_hDC, hPrevPen);
+			SelectObject(GET_MEM_DC(), hPrevPen);
 		}
 	}
 }
