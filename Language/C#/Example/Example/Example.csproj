@@ -7,5 +7,11 @@
 
   <ItemGroup>
     <Folder Include="Example_01\" />
+    <Folder Include="Example_03\" />
+    <Folder Include="Example_04\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Example_03\" />
+    <None Remove="Example_04\" />
   </ItemGroup>
 </Project>

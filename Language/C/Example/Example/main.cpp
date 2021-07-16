@@ -7,12 +7,16 @@
 
 #include "Example_01/Example_01.hpp"
 #include "Example_02/Example_02.hpp"
+#include "Example_03/Example_03.hpp"
+#include "Example_04/Example_04.hpp"
+#include "Example_05/Example_05.hpp"
+#include "Example_06/Example_06.hpp"
 
 /*
  C 언어 주제 리스트
  :
  - Example_01 (C 기초)
- - Example_02 (변수/상수, 데이터 입/출력)
+ - Example_02 (변수, 데이터 입/출력)
  - Example_03 (연산자)
  - Example_04 (조건문)
  - Example_05 (반복문)
@@ -41,15 +45,23 @@
  
  C 언어 파일 유형
  :
- - 헤더 파일		<= 각 소스 파일 간에 정보를 알리기 위한 용도
- - 소스 파일		<= 실제 컴퓨터가 실행 할 명령어를 작성하기 위한 용도
+ - 헤더 파일 (.h)		<= 각 소스 파일 간에 정보를 알리기 위한 용도
+ - 소스 파일 (.c)		<= 실제 컴퓨터가 실행 할 명령어를 작성하기 위한 용도
  */
 //! 메인 함수
 int main(const int argc, const char **args) {
+	/*
+	 srand 함수는 난수 생성에 사용되는 시드 값을 변경하는 역할을 수행한다. (즉, 해당 함수를 사용해서 시드 값을
+	 변경함으로써 난수가 생성되는 패턴을 변경하는 것이 가능하다.)
+	 */
 	srand((unsigned int)time(NULL));
 	
-	Example_01(argc, args);
-	Example_02(argc, args);
+//	Example_01(argc, args);
+//	Example_02(argc, args);
+//	Example_03(argc, args);
+//	Example_04(argc, args);
+//	Example_05(argc, args);
+	Example_06(argc, args);
 	
 	return 0;
 }

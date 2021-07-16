@@ -1,8 +1,8 @@
 ﻿using System;
 
 namespace Example {
-	//! Example 2
-	public class Example_02 {
+	//! Example 3
+	public class Example_03 {
 		//! 초기화
 		public static void Start(string[] args) {
 			Console.WriteLine("Hello, World!");
