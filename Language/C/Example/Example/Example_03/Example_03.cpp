@@ -40,6 +40,9 @@ void Example_03(const int argc, const char **args) {
 	printf("++%d, --%d\n", ++nValA, --nValB);
 	printf("%d++, %d--\n", nValA++, nValB--);
 	
+	printf("\n=====> 후위 증감 연산 <=====\n");
+	printf("%d, %d\n", nValA, nValB);
+	
 	printf("\n=====> 조건 연산자 <=====\n");
 	printf("%d < %d ? : %d\n", nValA, nValB, (nValA < nValB) ? nValA : nValB);
 }

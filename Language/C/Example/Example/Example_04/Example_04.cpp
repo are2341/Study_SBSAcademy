@@ -44,7 +44,18 @@ void Example_04(const int argc, const char **args) {
 		}
 	}
 #elif defined E04_SWITCH_CASE
+	int nScore = 0;
 	
+	printf("점수 입력 : ");
+	scanf("%d", &nScore);
+	
+	switch(nScore / 10) {
+		case 6: printf("D 학점입니다.\n");
+		case 7: printf("C 학점입니다.\n");
+		case 8: printf("B 학점입니다.\n");
+		case 9: case 10: printf("A 학점입니다.\n");
+		default: printf("F 학점입니다.\n");
+	}
 #elif defined E04_PRACTICE
 #if defined P04_A
 	

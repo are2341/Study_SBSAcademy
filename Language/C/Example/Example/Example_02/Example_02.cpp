@@ -18,7 +18,7 @@ void Example_02(const int argc, const char **args) {
 	long nLongVal = 0;
 	long long nLongLongVal = 0;
 	
-	printf("=====> 정수형 결과 <=====\n");
+	printf("=====> 정수형 <=====\n");
 	printf("Short (%ld) : %d\n", sizeof(nShortVal), nShortVal);
 	printf("Int (%ld) : %d\n", sizeof(nIntVal), nIntVal);
 	printf("Long (%ld) : %ld\n", sizeof(nLongVal), nLongVal);
